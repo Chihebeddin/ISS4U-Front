@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- <title>Responsive Sidebar Menu</title> -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/> -->
+  </head>
+  <body *ngIf="isLoggedIn">
+    <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar" >
+      <header>My Menu</header>
+      <a href="#" class="active" target="container">
+        <i class="fas fa-qrcode"></i>
+        <span>Dashboard</span>
+      </a>
+      <a href="#" target="container">
+        <i class="fas fa-link"></i>
+        <span>Shortcuts</span>
+      </a>
+      <a href="#" target="container">
+        <i class="fas fa-stream"></i>
+        <span>Overview</span>
+      </a>
+      <a href="#" target="container">
+         <i class="fas fa-calendar"></i>
+        <span>Events</span>
+      </a>
+      <a href="#" target="container">
+        <i class="far fa-question-circle"></i>
+        <span>About</span>
+      </a>
+      <a href="#" target="container">
+        <i class="fas fa-sliders-h"></i>
+        <span>Services</span>
+      </a>
+      <a href="#" target="container">
+        <i class="far fa-envelope"></i>
+        <span>Contact</span>
+      </a>
+      <div class="nav-item" *ngIf="showAdminBoard">
+        <a href="/register" class="nav-link" routerLink="/register">Add User</a>
+      </div>
+      <a href class="nav-link" (click)="logout()">LogOut</a>
+    </div>
+    <!-- <iframe class="container" name="container"id="container"></iframe> -->
+</body>
+</html>
